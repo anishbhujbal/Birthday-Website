@@ -1,0 +1,189 @@
+/* Navbar Styling */
+header {
+    width: 100%;
+    padding-left: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: fixed; /* Make it fixed at the top */
+    top: 0; /* Ensures it stays at the top */
+    left: 0; 
+    z-index: 1000;
+    background: transparent; /* Semi-transparent background */
+  }
+  
+  header nav a {
+    color: #fff;
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    transition: 0.2s;
+    text-decoration: none;
+  }
+  
+  a.active {
+    background: #310247cb;
+    border-radius: 2px;
+  }
+  
+  a:hover {
+    background: #f20044;
+    border-radius: 2px;
+  }
+  
+  /* Body and Background Styling */
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b1522;
+    overflow: hidden;
+    padding-top: 60px; /* Push content below the fixed navbar */
+  }
+  
+  .heart {
+    height: 100px;
+    width: 100px;
+    background: #f20044;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    animation: heart 0.6s linear infinite;
+  }
+  
+  @keyframes heart {
+    0% {
+      transform: rotate(-45deg) scale(1.07);
+    }
+    80% {
+      transform: rotate(-45deg) scale(1);
+    }
+    100% {
+      transform: rotate(-45deg) scale(0.8);
+    }
+  }
+  
+  .heart:before {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: #f20044;
+    top: -50%;
+    border-radius: 50px;
+    box-shadow: -10px -10px 90px #f20044;
+  }
+  
+  .heart:after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: #f20044;
+    right: -50%;
+    border-radius: 50px;
+    box-shadow: 10px 10px 90px #f20044;
+  }
+  
+  .text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;  /* Adjust the circle radius */
+    height: 200px;
+  }
+  
+  .text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f20044;
+    opacity: 0;
+    position: absolute;
+    animation: fadeInOut 2s infinite;
+  }
+  
+  .text:nth-child(1) {
+    animation-delay: 0s;
+    transform: rotate(-50deg) translateY(-90px) translateX(-40px);
+  }
+  
+  .text:nth-child(2) {
+    animation-delay: 1s;
+    transform: rotate(0deg) translateY(-70px);
+  }
+  .text:nth-child(3) {
+    animation-delay: 0.6s;
+    transform: rotate(50deg) translateY(-90px) translateX(40px);
+  }
+  
+  
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+      
+    }
+    50% {
+      opacity: 1;
+      
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+  /* Tossing Text Animation */
+@keyframes toss {
+    0% {
+      opacity: 0;
+      transform: translateY(0) scale(1);
+    }
+    30% {
+      opacity: 1;
+      transform: translateY(-50px) scale(1.1);
+    }
+    70% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  /* Apply Tossing Animation */
+  .text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f20044;
+    opacity: 0;
+    position: absolute;
+    animation: toss 2s infinite;
+  }
+  
+  .text:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .text:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  
+  .text:nth-child(3) {
+    animation-delay: 1s;
+  }
+  
