@@ -1,0 +1,67 @@
+/* Set the background color of the entire page */
+body {
+    background-image: url('../images/background.jpeg');
+    color: white; /* Ensures text remains visible on the black background */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header section */
+
+header{
+    width: 100%; 
+    max-width: 100%;
+    padding-left: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+}
+
+header nav a{
+    color: #fff;
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+a.active{
+    background: #14ff72cb;
+    border-radius: 2px;
+}
+
+a:hover{
+    background: #14ff72cb;
+    border-radius: 2px;
+}
+
+/* Header section */
+
+
+
+/* Video section styling */
+#video-section {
+    margin-top: 60px; /* Prevent the video from being hidden under the fixed navbar */
+    display: none; /* Hide video by default */
+}
+
+/* Video styles */
+video {
+    display: block; /* Ensure the video is treated as a block element */
+    margin: 20px auto; /* Center the video and add margin */
+    max-width: 100%; /* Make the video responsive */
+    height: 75vh; /* Use a percentage of the viewport height for responsive sizing */
+    object-fit: cover; /* Ensure the video fills the area */
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 999px) {
+    header nav a {
+        font-size: 14px;
+    }
+}
