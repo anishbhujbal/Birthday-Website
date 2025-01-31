@@ -101,3 +101,27 @@ toggleMusic.addEventListener("click", () => {
         toggleMusic.textContent = "🔊";
     }
 });
+
+// FOR NOT ALLOWING RAPID CLICKING
+
+let isAnimating = false;
+
+nextBtn.onclick = function () {
+    if (!isAnimating) {
+        isAnimating = true;
+        showSlider('next');
+        setTimeout(() => {
+            isAnimating = false;
+        }, timeRunning);
+    }
+};
+
+prevBtn.onclick = function () {
+    if (!isAnimating) {
+        isAnimating = true;
+        showSlider('prev');
+        setTimeout(() => {
+            isAnimating = false;
+        }, timeRunning);
+    }
+};
