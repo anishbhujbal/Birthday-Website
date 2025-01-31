@@ -174,12 +174,12 @@ header nav a{
 }
 
 a.active{
-    background: #14ff72cb;
+    background: #FF00FF;
     border-radius: 2px;
 }
 
 a:hover{
-    background: #14ff72cb;
+    background: #FF00FF;
     border-radius: 2px;
 }
 
