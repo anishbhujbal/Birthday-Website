@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Video Gallery In HTML And CSS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+    <link rel="stylesheet" href="../css/concert.css">
+</head>
+<body>
+    <header>
+        <nav> 
+            <a href="../index.html"><b>Home🏠</b></a>
+            <a href="video.html"><b>Video</b></a>
+            <a href="quiz.html"><b>Quiz</b></a>
+            <a href="goofy.html"><b>Goofy</b></a>
+            <a href="concert.html"><b>Concert</b></a>
+            <a href="heart.html"><b>My Heart</b></a>
+        </nav>
+
+     </header>
+    <div class="container">
+        <h1>Your Very Own Concert</h1>
+        <div class="row">
+            <!-- Left Column -->
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="../videos/soch na sake.jpg" alt="Nature">
+                        <img src="../play.png" class="play-btn" onclick="playVideo('../videos/soch na sake.mp4')" alt="Play">
+                    </div>
+                    <p>Soch Na Sake </p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="../videos/recording.jpg" alt="Black">
+                        <img src="../play.png" class="play-btn" onclick="playVideo('../videos/dekha hazaro.mp4')" alt="Play">
+                    </div>
+                    <p>Dekha Hazaro Dafa Aapko <br>(Our little car drive and an amazing evening)</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="../videos/recording.jpg" alt="Cat">
+                        <img src="../play.png" class="play-btn" onclick="playVideo('../videos/tum aakhon se batana.mp4')" alt="Play">
+                    </div>
+                    <p>Tum Aakhon Se Batana</p>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="../videos/alag aasman.jpg" alt="Nature">
+                        <img src="../play.png" class="play-btn" onclick="playVideo('../videos/alag aasman.mp4')" alt="Play">
+                    </div>
+                    <p>Alag Aasmaan</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="../videos/recording.jpg" alt="Black">
+                        <img src="../play.png" class="play-btn" onclick="playVideo('../videos/jo tu na mila.mp4')" alt="Play">
+                    </div>
+                    <p>Jo Tu Na Mila Mujhe</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="../videos/recording.jpg" alt="Cat">
+                        <img src="../play.png" class="play-btn" onclick="playVideo('../videos/hans mat pagali.mp4')" alt="Play">
+                    </div>
+                    <p>Hans Mat Pagali</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+            <!-- Left Column -->
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="../videos/recording.jpg" alt="Nature">
+                        <img src="../play.png" class="play-btn" onclick="playVideo('../videos/birds of a feather.mp4')" alt="Play">
+                    </div>
+                    <p>Birds Of A Feather</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="../videos/recording.jpg" alt="Black">
+                        <img src="../play.png" class="play-btn" onclick="playVideo('../videos/jeena jeena.mp4')" alt="Play">
+                    </div>
+                    <p>Jeena Jeena</p>
+                </div>
+               
+            </div>
+
+            <!-- Right Column -->
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="../videos/recording.jpg" alt="Nature">
+                        <img src="../play.png" class="play-btn" onclick="playVideo('../videos/man mera.mp4')" alt="Play">
+                    </div>
+                    <p>Mann Mera</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="../videos/recording.jpg" alt="Black">
+                        <img src="../play.png" class="play-btn" onclick="playVideo('../videos/sukoon mila.mp4')" alt="Play">
+                    </div>
+                    <p>Sukoon Mila</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Player -->
+    <div class="video-player" id="videoplayer">
+        <video width="100%" controls id="myvideo">
+            <source src="car.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <img src="../close.png" class="close-btn" onclick="stopbtn()" alt="Close">
+    </div>
+
+    <script>
+        var videoplayer = document.getElementById("videoplayer");
+        var myvideo = document.getElementById("myvideo");
+
+        // Function to stop the video and hide the player
+        function stopbtn() {
+            myvideo.pause(); // Pause the video
+            myvideo.currentTime = 0; // Reset video to start
+            videoplayer.style.display = "none"; // Hide the player
+        }
+
+        // Function to play the video
+        function playVideo(file) {
+            myvideo.src = file; // Set the video source
+            videoplayer.style.display = "block"; // Show the player
+            myvideo.play(); // Play the video
+        }
+    </script>
+</body>
+</html>
